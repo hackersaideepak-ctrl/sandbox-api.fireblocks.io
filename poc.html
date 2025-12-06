@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Security Test PoC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Courier New", monospace;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #550000 0, #000000 55%, #000000 100%);
+      color: #f8f8f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 30px;
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+      max-width: 700px;
+      width: 90%;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .title {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #ff3b3b;
+      text-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000;
+      margin-bottom: 15px;
+      animation: flicker 1.8s infinite alternate;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ffcccb;
+      margin-bottom: 25px;
+    }
+
+    .details {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #d0d0d0;
+      text-align: left;
+      border-top: 1px solid rgba(255, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+      padding: 15px 0;
+      margin-bottom: 20px;
+      white-space: pre-line;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 5px;
+      background: #111;
+      border: 1px solid #ff0000;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ff8080;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    @keyframes flicker {
+      0% {
+        opacity: 1;
+        text-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000;
+      }
+      50% {
+        opacity: 0.6;
+        text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+      }
+      100% {
+        opacity: 0.9;
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">You’ve Been Hacked</div>
+    <div class="subtitle">This is a security test proof of concept.</div>
+
+    <div class="details">
+Detected issue: Sample vulnerability demonstration  
+Impact: An attacker could display arbitrary content to users  
+Time: 2025-12-06 21:00:00 (Demo)
+
+No real data has been accessed or modified in this PoC.
+    </div>
+
+    <div class="badge">PoC – For Authorized Testing Only</div>
+
+    <div class="note">
+      If you are the application owner, please review your security configuration and input validation.
+    </div>
+  </div>
+</body>
+</html>
